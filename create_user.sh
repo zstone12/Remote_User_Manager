@@ -15,13 +15,13 @@ set userpasswd [lindex $argv 1]
 set port "9005"
 spawn ssh master -p $port
 #这里就已经把问题处理掉了
-:'
-expect {:
-    "(yes/no)" { send "yes\r"; exp_continue }
-    "password:" { send "$password\r" }
-}	
+
+#expect {:
+#    "(yes/no)" { send "yes\r"; exp_continue }
+#    "password:" { send "$password\r" }
+#}	
 #expect：等待命令提示信息的出现，也就是捕捉用户输入的提示：
-'
+
 #test 
 #expect "]*"
 #send "touch /tmp/12.txt\r"
