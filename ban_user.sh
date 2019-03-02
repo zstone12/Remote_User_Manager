@@ -11,8 +11,6 @@ set timeout 5
 set username [lindex $argv 0]
 
 #shell注释
-set userpasswd [lindex $argv 1]
-
 #准备把poot改为第三个参数
 set port "9005"
 spawn ssh master -p $port
