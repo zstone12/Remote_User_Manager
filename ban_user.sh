@@ -12,7 +12,7 @@ set username [lindex $argv 0]
 
 #shell注释
 #准备把poot改为第三个参数
-set port "9005"
+set port [lindex $argv 1]
 spawn ssh master -p $port
 
 
