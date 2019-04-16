@@ -11,8 +11,7 @@ set timeout 5
 set username [lindex $argv 0]
 
 #shell注释
-set userpasswd [lindex $argv 1]
-set port [lindex $argv 2]
+set port [lindex $argv 1]
 spawn ssh master -p $port
 
 expect "]*"
