@@ -1,9 +1,10 @@
 ---
  - hosts: linux01
+   gather_facts: no
    remote_user: root
 
    tasks:
    - name: create user
      user:
-       name: tx
-       password: 123456
+       name: '{{ name }}'
+       password: '{{ password }}'
