@@ -10,3 +10,6 @@ command_lists:
     on windows:
       create_user
       change_user_password
+
+used to use except and shell-scripts To achieve the same effect.
+both are available.
