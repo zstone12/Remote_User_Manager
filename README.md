@@ -14,3 +14,8 @@ command_lists:
 
 used to use except and shell-scripts To achieve the same effect.
 both are available.
+
+eaamples:
+
+
+     ansible-playbook create_user.yaml --extra-vars "name=hupu password=123456" 
