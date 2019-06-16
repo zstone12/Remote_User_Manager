@@ -1,5 +1,5 @@
 ---
- - hosts: linux01
+ - hosts: '{{ hosts }}'
    gather_facts: no
    remote_user: root
 
