@@ -4,7 +4,8 @@
    remote_user: root
 
    tasks:
-   - name: create user
+   - name: remove user
      user:
        name: '{{ name }}'
-       password: '{{ password }}'
+       state: absent
+       remove: yes
