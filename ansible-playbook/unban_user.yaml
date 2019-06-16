@@ -1,0 +1,10 @@
+---
+- hosts: '{{ hosts }}'
+  gather_facts: no
+  remote_user: root
+
+  tasks:
+  - name: ban user
+    user:
+      name: '{{ name }}'
+      password_lock: no
