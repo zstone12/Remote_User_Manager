@@ -1,0 +1,10 @@
+---
+ - hosts: linux01
+   remote_user: root
+
+   tasks:
+   - name: remove user
+     user:
+       name: tx
+       state: absent
+       remove: yes
