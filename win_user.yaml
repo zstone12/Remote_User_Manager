@@ -1,0 +1,12 @@
+---
+- hosts: win2
+  remote_user: xiyoucs
+
+  tasks:
+  - name: create user or if exists change password
+    win_user:
+      name: xiyou
+      password: 123456
+      groups: Administrators,Remote Desktop Users
+      user_cannot_change_password: yes
+      
