@@ -38,12 +38,6 @@ send "$userpasswd\r"
 expect "*password:"
 send "$userpasswd\r"
 
-#expect "]*"
-#send "su - hdfs\r"
-#expect "]*"
-#send "hdfs dfs -mkdir /user/$username\r"
-#expect "]*"
-#send "hdfs dfs -chown -R $username /user/$username\r"
 
 expect "]*"
 send "logout\r"
