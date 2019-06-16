@@ -4,6 +4,7 @@ command_lists:
     
     on linux:
       create_user
+      remove_user
       ban_user
       unban_user
     
