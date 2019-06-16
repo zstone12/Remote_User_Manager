@@ -18,4 +18,4 @@ both are available.
 examples:
 
 
-     ansible-playbook create_user.yaml --extra-vars "name=hupu password=123456" 
+     ansible-playbook create_user.yaml --extra-vars "hosts=linux01 name=zhihu password=123456" -i ./hosts
