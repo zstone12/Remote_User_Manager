@@ -4,9 +4,6 @@
   remote_user: xiyoucs
 
   tasks:
-  - name: echo password
-    debug: "msg='{{ password }}'"
-  - name: create win_user
     win_user:
       name: '{{ user }}'
       password: '{{ password }}'
