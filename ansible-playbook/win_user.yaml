@@ -1,12 +1,15 @@
 ---
-- hosts: win2
+- hosts: '{{ host }}'
+  gather_facts: no
   remote_user: xiyoucs
 
   tasks:
-  - name: create user or if exists change password
+  - name: echo password
+    debug: "msg='{{ password }}'"
+  - name: create win_user
     win_user:
-      name: xiyou
-      password: 123456
+      name: '{{ user }}'
+      password: '{{ password }}'
       groups: Administrators,Remote Desktop Users
+      update_password: always
       user_cannot_change_password: yes
-      
