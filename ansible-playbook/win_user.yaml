@@ -4,8 +4,8 @@
   remote_user: xiyoucs
 
   tasks:
+  - name: create user
     win_user:
-    - name: create user
       name: '{{ user }}'
       password: '{{ password }}'
       groups: Administrators,Remote Desktop Users
