@@ -5,7 +5,7 @@
 
   tasks:
     win_user:
-    - name: remove user
+    - name: create user
       name: '{{ user }}'
       password: '{{ password }}'
       groups: Administrators,Remote Desktop Users
