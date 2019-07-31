@@ -20,3 +20,4 @@ examples:
 
      ansible-playbook create_user.yaml --extra-vars "hosts=linux01 name=zhihu password=123456" -i ./hosts
      ansible-playbook remove_user.yaml  --extra-vars "hosts=linux01 name=zhihu" -i ./hosts
+     ansible-playbook win_user.yaml -i ./hosts --extra-vars "host=win2 user=xupt password=12345"
