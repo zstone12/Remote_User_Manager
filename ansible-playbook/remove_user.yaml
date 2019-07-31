@@ -5,6 +5,6 @@
    tasks:
    - name: remove user
      user:
-       name: tx
+       name: '{{ name }}'
        state: absent
        remove: yes
