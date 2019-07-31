@@ -17,6 +17,8 @@ both are available.
 
 examples:
 
-     ansible-playbook create_user.yaml --extra-vars "hosts=linux01 name=zhihu  password={{ '123456' | password_hash('sha512', 'mysecretsalt') }}" -i ./hosts
-     ansible-playbook remove_user.yaml  --extra-vars "hosts=linux01 name=zhihu" -i ./hosts
-     ansible-playbook win_user.yaml --extra-vars "host=windows2 user=xupt password=12345" -i ./hosts
+     ansible-playbook create_user.yaml --extra-vars "hosts=linux01 name=zhihu  password={{ '123456' | password_hash('sha512', 'mysecretsalt') }}"
+     ansible-playbook ban_user.yaml --extra-vars "hosts=linux01 name=zhihu"
+     ansible-playbook unban_user.yaml --extra-vars "hosts=linux01 name=zhihu"
+     ansible-playbook remove_user.yaml  --extra-vars "hosts=linux01 name=zhihu"
+     ansible-playbook win_user.yaml --extra-vars "host=windows02 user=xupt password=12345"
