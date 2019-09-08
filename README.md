@@ -22,3 +22,5 @@ examples:
      ansible-playbook unban_user.yaml --extra-vars "hosts=linux01 name=zhihu"
      ansible-playbook remove_user.yaml  --extra-vars "hosts=linux01 name=zhihu"
      ansible-playbook win_user.yaml --extra-vars "host=windows02 user=xupt password=12345"
+      ansible-playbook create_user_master.yaml --extra-vars "hosts=master name=zhihu  password={{ '123456' | password_hash('sha512', 'mysecretsalt') }}"
+
