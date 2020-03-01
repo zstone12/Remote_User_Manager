@@ -1,0 +1,21 @@
+---
+- hosts: '{{ hosts }}'
+  gather_facts: no
+  remote_user: root
+  tasks:
+  - name: create user
+    user:
+      name: '{{ name2 }}'
+      password: '{{password}}'
+  - name: mkdir
+    shell: hdfs dfs -mkdir '{{ name1 }}'
+    ignore_errors: yes
+    become: yes
+    become_method: su
+    become_user: hdfs
+
+  - name: chown
+    shell: hdfs dfs -chown -R '{{ name2 }}' '{{ name1 }}'
+    become: yes
+    become_method: su
+    become_user: hdfs
